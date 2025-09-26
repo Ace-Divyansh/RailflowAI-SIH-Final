@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailFlow AI - Live Simulation</title>
+    <link rel="stylesheet" href="/static/sim_style.css">
+</head>
+<body>
+    <!-- NEW: Station Information Header -->
+    <div class="station-info-header">
+        <h1 class="station-name">Walajah Road Junction</h1>
+        <p class="station-details">(Chennai Division)</p>
+        <div class="schedule-info">
+            <p><strong>Schedule:</strong> Monday Timetable</p>
+            <p><strong>Trains:</strong> <span id="trainCount">Loading...</span> trains simulated</p>
+        </div>
+    </div>
+
+    <div class="controls">
+        <h2>Live Simulation: Advanced Station Control</h2>
+        <div class="button-group">
+            <button id="naiveButton">Run Naive Simulation</button>
+            <button id="aiButton"></button>
+            <button id="pauseButton">Pause/Play</button>
+        </div>
+        <div class="info-box">
+            <p><strong>Mode:</strong> <span id="modeText">--</span></p>
+            <p><strong>Time:</strong> <span id="timeText">0.00</span> mins</p>
+        </div>
+        <a href="/" class="back-link">← Back to Landing Page</a>
+    </div>
+
+    <div id="visualization">
+        <!-- The entire simulation (tracks, signals, trains) will be created here by JavaScript -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="/static/sketch.js"></script>
+</body>
+</html>

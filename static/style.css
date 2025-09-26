@@ -1,0 +1,231 @@
+/* static/style.css - For the Landing Page */
+
+:root {
+    --primary-dark: #0f172a;
+    --primary-blue: #3b82f6;
+    --primary-indigo: #4f46e5;
+    --text-light: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-image: url("pple-carplay-ios-26-4000x2182-23298.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.847),rgba(0, 0, 0, 0.341), rgba(255, 255, 255, 0));
+    /* background-color: var(--primary-dark); */
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+}
+
+/* NEW: Team badge */
+.team-badge {
+    background: var(--primary-indigo);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.hero-section {
+    text-align: center;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #ffffff, #d6b0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.6;
+}
+
+/* NEW: Stats row */
+.stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-image: linear-gradient(to right, var(--primary-indigo), var(--primary-blue));
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(60, 99, 224, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(60, 99, 224, 0.4);
+}
+
+.features-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.feature-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* NEW: Tech tags */
+.tech-tags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--primary-blue);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* NEW: Project info section */
+.project-info {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 600px;
+}
+
+.info-card h3 {
+    color: var(--primary-blue);
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.info-card p {
+    color: var(--text-muted);
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .features-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-row {
+        gap: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .team-badge {
+        margin-left: 0;
+    }
+}
